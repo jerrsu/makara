@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel Agency Terbaik - Sewa Bus dan Travel Wisata Nyaman dan Elegan">
+    <title>Travel Agency - Home</title>
+    <!-- Bootstrap 5 CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Animation Library (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/makara.png" alt="Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Armada
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm">
+                            <!-- <li><a class="dropdown-item" href="armada.html#big">Big Bus</a></li>
+                            <li><a class="dropdown-item" href="armada.html#medium">Medium Bus</a></li>
+                            <li><a class="dropdown-item" href="armada.html#small">Small Van</a></li> -->
+                            <li><a class="dropdown-item" href="#">Big Bus</a></li>
+                            <li><a class="dropdown-item" href="#">Medium Bus</a></li>
+                            <li><a class="dropdown-item" href="#">Small Van</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#contact" class="btn btn-primary text-white px-4">Hubungi Kami</a>
+                    </li>
+                    <!-- <li class="nav-item ms-lg-3">
+                        <button id="theme-toggle" class="btn btn-link nav-link p-0" aria-label="Toggle Dark Mode">
+                            <i class="bi bi-moon-fill fs-5"></i>
+                        </button>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <div class="hero-slide" style="background-image: url('assets/images/DSC02950.jpg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content" data-aos="fade-up">
+                            <h1 class="hero-title">Jelajahi Dunia dengan Kenyamanan Premium</h1>
+                            <p class="hero-subtitle">Nikmati perjalanan tak terlupakan dengan armada modern dan
+                                pelayanan terbaik dari kami.</p>
+                            <!-- <a href="armada.html" class="btn btn-primary btn-lg mt-3">Lihat Armada <i
+                                    class="bi bi-arrow-right ms-2"></i></a> -->
+                                    <a href="#" class="btn btn-primary btn-lg mt-3">Lihat Armada <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <div class="hero-slide" style="background-image: url('assets/images/tk.jpg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="hero-title">Armada Bus Pariwisata Terbaik</h1>
+                            <p class="hero-subtitle">Kapasitas besar dengan fasilitas lengkap untuk kenyamanan rombongan
+                                Anda.</p>
+                            <!-- <a href="armada.html#big" class="btn btn-primary btn-lg mt-3">Detail Big Bus <i
+                                    class="bi bi-arrow-right ms-2"></i></a> -->
+                                    <a href="#" class="btn btn-primary btn-lg mt-3">Detail Big Bus <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <div class="hero-slide" style="background-image: url('assets/images/big.jpg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="hero-title">Layanan Travel Profesional</h1>
+                            <p class="hero-subtitle">Pilihan armada medium bus untuk perjalanan keluarga atau kantor
+                                yang lebih fleksibel.</p>
+                            <!-- <a href="armada.html#medium" class="btn btn-primary btn-lg mt-3">Detail Medium Bus <i
+                                    class="bi bi-arrow-right ms-2"></i></a> -->
+                        <a href="#" class="btn btn-primary btn-lg mt-3">Detail Medium Bus <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <!-- <section class="hero-section">
+        <div class="hero-slide" style="background-image: url('assets/images/DSC02950.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">Jelajahi Dunia dengan Kenyamanan Premium</h1>
+                <p class="hero-subtitle">Nikmati perjalanan tak terlupakan dengan armada modern dan pelayanan terbaik
+                    dari kami.</p>
+                <a href="armada.html" class="btn btn-primary btn-lg mt-3">Lihat Armada <i
+                        class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Armada Preview Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Pilihan Armada Kami</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Kami menyediakan berbagai pilihan armada
+                untuk memenuhi kebutuhan perjalanan Anda, mulai dari rombongan besar hingga keluarga kecil.</p>
+
+            <div class="row g-4">
+                <!-- Big Bus -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card card-custom h-100 shadow-lg">
+                        <img src="assets/images/big.jpg" class="card-img-top" alt="Big Bus">
+                        <div class="card-body">
+                            <h5 class="card-title">Big Bus</h5>
+                            <p class="card-text text-muted">Kapasitas 45-59 Seat. Fasilitas lengkap untuk perjalanan
+                                jauh dengan kenyamanan maksimal.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-2">Detail
+                                Armada</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Bus -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card card-custom h-100  shadow-lg">
+                        <img src="assets/images/medium.jpg" class="card-img-top" alt="Medium Bus">
+                        <div class="card-body">
+                            <h5 class="card-title">Medium Bus</h5>
+                            <p class="card-text text-muted">Kapasitas 30-35 Seat. Pilihan tepat untuk rombongan sedang
+                                dengan aksesibilitas yang baik.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-2">Detail
+                                Armada</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Van -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card card-custom h-100 shadow-lg">
+                        <img src="assets/images/small.jpg" class="card-img-top" alt="Small Van">
+                        <div class="card-body">
+                            <h5 class="card-title">Small Luxury Van</h5>
+                            <p class="card-text text-muted">Kapasitas 10-15 Seat. Eksklusif dan privat, cocok untuk
+                                keluarga dan VIP.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-2">Detail
+                                Armada</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Layanan Utama</h2>
+            <p class="section-subtitle" data-aos="fade-up">Kenapa memilih kami sebagai partner perjalanan Anda?</p>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-box shadow">
+                        <i class="bi bi-shield-check service-icon"></i>
+                        <h5>Aman & Nyaman</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-box shadow">
+                        <i class="bi bi-clock-history service-icon"></i>
+                        <h5>Tepat Waktu</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-box shadow">
+                        <i class="bi bi-emoji-smile service-icon"></i>
+                        <h5>Pelayanan Ramah</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-box shadow">
+                        <i class="bi bi-wallet2 service-icon"></i>
+                        <h5>Harga Terbaik</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="assets/images/DSC02794.jpg" class="img-fluid rounded-5 shadow-lg" alt="About Us"">
+                </div>
+                <div class=" col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <h2 class="section-title text-start mb-4">Tentang Kami</h2>
+                    <p class="lead mb-4">PT. Akselerasi Gerakara Mulya, yang lebih dikenal dengan "Makara," adalah
+                        perusahaan jasa transportasi bus yang berpusat di Sukabumi dan berfokus pada bidang pariwisata
+                        sejak tahun 2024. Kami menyediakan layanan penyewaan bus untuk perjalanan wisata, baik di dalam
+                        maupun luar kota, dengan harga yang kompetitif.</p>
+                    <p class="text-muted mb-4">Makara adalah sebuah nama yang diambil dari bahasa Sanskerta, yang
+                        bermakna "kendaraan para dewa." Filosofi ini tercermin dalam visi perusahaan bus pariwisata
+                        Makara, yang berdiri di Sukabumi sejak tahun 2024.</p>
+                    <a href="#" class="btn btn-primary text-white">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6289686932490" class="floating-whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-dark">
+        <div class="container bg-dark">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <!-- <h5 class="text-white mb-3">TRAVEL<span style="color:var(--primary-color);">CORP</span></h5> -->
+                    <img src="assets/images/makara.png" alt="Logo" class="img-fluid">
+                    <p class="small text-white mb-0 mt-2">Partner perjalanan terpercaya Anda. Melayani dengan hati,
+                        mengantar
+                        dengan selamat sampai tujuan.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Armada</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="list-unstyled text-white small">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Jl. Wisata No. 123, Jakarta</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +62 896 8693 2490</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@makara.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Social Media</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center small text-muted">
+                &copy; 2026 Makara. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

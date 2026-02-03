@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency - Armada Kami</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Animation Library (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .armada-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/bus_luxury_big_1770031346346.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .feature-icon {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-bus-front-fill me-2"></i>TRAVEL<span class="text-dark">CORP</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Armada
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm">
+                            <li><a class="dropdown-item" href="#big">Big Bus</a></li>
+                            <li><a class="dropdown-item" href="#medium">Medium Bus</a></li>
+                            <li><a class="dropdown-item" href="#small">Small Van</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#contact" class="btn btn-primary text-white px-4">Hubungi Kami</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="theme-toggle" class="btn btn-link nav-link p-0" aria-label="Toggle Dark Mode">
+                            <i class="bi bi-moon-fill fs-5"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="armada-header" data-aos="fade-down">
+        <div class="text-center">
+            <h1 class="display-4 fw-bold">Armada Kami</h1>
+            <p class="lead">Pilihan transportasi terbaik untuk kebutuhan perjalanan Anda</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container pb-5">
+
+        <!-- Big Bus Section -->
+        <section id="big" class="mb-5 section-padding border-bottom">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="assets/images/bus_luxury_big_1770031346346.png" class="img-fluid rounded-4 shadow-lg"
+                        alt="Big Bus">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="badge bg-primary mb-2">Best Seller</span>
+                    <h2 class="display-6 fw-bold mb-3">Big Luxury Bus</h2>
+                    <p class="text-muted mb-4">Pilihan utama untuk rombongan wisata besar, kunjungan industri, atau
+                        ziarah. Dilengkapi dengan suspensi udara untuk kenyamanan maksimal di segala medan jalan.</p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-6"><i class="bi bi-people-fill feature-icon"></i> 45-59 Seats</div>
+                        <div class="col-6"><i class="bi bi-snow feature-icon"></i> Full AC</div>
+                        <div class="col-6"><i class="bi bi-wifi feature-icon"></i> WiFi Onboard</div>
+                        <div class="col-6"><i class="bi bi-music-note-beamed feature-icon"></i> Karaoke & TV</div>
+                        <div class="col-6"><i class="bi bi-plug feature-icon"></i> Charger Port</div>
+                        <div class="col-6"><i class="bi bi-bag-check feature-icon"></i> Bagasi Luas</div>
+                    </div>
+
+                    <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20sewa%20Big%20Bus"
+                        class="btn btn-primary btn-lg rounded-pill px-5">Booking Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medium Bus Section -->
+        <section id="medium" class="mb-5 section-padding border-bottom">
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left">
+                    <img src="assets/images/bus_medium_1770031362258.png" class="img-fluid rounded-4 shadow-lg"
+                        alt="Medium Bus">
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-6 fw-bold mb-3">Medium Bus</h2>
+                    <p class="text-muted mb-4">Solusi fleksibel untuk grup sedang. Ukuran yang lebih compact
+                        memungkinkan akses ke lokasi wisata dengan jalan yang lebih sempit namun tetap nyaman.</p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-6"><i class="bi bi-people-fill feature-icon"></i> 30-35 Seats</div>
+                        <div class="col-6"><i class="bi bi-snow feature-icon"></i> Full AC</div>
+                        <div class="col-6"><i class="bi bi-tv feature-icon"></i> LED TV</div>
+                        <div class="col-6"><i class="bi bi-music-player feature-icon"></i> Audio System</div>
+                        <div class="col-6"><i class="bi bi-layout-text-sidebar-reverse feature-icon"></i> Reclining Seat
+                        </div>
+                        <div class="col-6"><i class="bi bi-safe feature-icon"></i> Emergency Exit</div>
+                    </div>
+
+                    <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20sewa%20Medium%20Bus"
+                        class="btn btn-primary btn-lg rounded-pill px-5">Booking Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Small Van Section -->
+        <section id="small" class="section-padding">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="assets/images/van_luxury_1770031378063.png" class="img-fluid rounded-4 shadow-lg"
+                        alt="Small Van">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="badge bg-dark mb-2">Premium Choice</span>
+                    <h2 class="display-6 fw-bold mb-3">Small Luxury Van</h2>
+                    <p class="text-muted mb-4">Eksklusivitas untuk perjalanan VIP atau keluarga. Menawarkan privasi
+                        tinggi dan kenyamanan setara dengan mobil pribadi kelas atas.</p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-6"><i class="bi bi-people-fill feature-icon"></i> 10-15 Seats</div>
+                        <div class="col-6"><i class="bi bi-snow feature-icon"></i> AC Ducting</div>
+                        <div class="col-6"><i class="bi bi-stars feature-icon"></i> Lux Interior</div>
+                        <div class="col-6"><i class="bi bi-usb-symbol feature-icon"></i> USB Charging</div>
+                        <div class="col-6"><i class="bi bi-hand-thumbs-up feature-icon"></i> Captain Seat</div>
+                        <div class="col-6"><i class="bi bi-shield-check feature-icon"></i> Driver Pro</div>
+                    </div>
+
+                    <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20sewa%20Small%20Van"
+                        class="btn btn-primary btn-lg rounded-pill px-5">Booking Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/628123456789" class="floating-whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3">TRAVEL<span style="color:var(--primary-color);">CORP</span></h5>
+                    <p class="small text-muted mb-0">Partner perjalanan terpercaya Anda. Melayani dengan hati, mengantar
+                        dengan selamat sampai tujuan.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="armada.html">Armada</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Jl. Wisata No. 123, Jakarta</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +62 21 1234 5678</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@travelcorp.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Social Media</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center small text-muted">
+                &copy; 2024 Travel Corp. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>
