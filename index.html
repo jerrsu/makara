@@ -5,65 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Travel Agency Terbaik - Sewa Bus dan Travel Wisata Nyaman dan Elegan">
-    <title>Travel Agency - Home</title>
+    <!-- <link rel="icon" type="image/png" href="assets/images/makara.png"> -->
+    <title>Makara - Home</title>
     <!-- Bootstrap 5 CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Animation Library (AOS) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/images/makara.png" alt="Logo" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navbarNav">
+            <div class="collapse navbar-collapse bg-dark" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item ">
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Tentang Kami</a>
+                        <a class="nav-link " href="about.html">Tentang Kami</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Armada
                         </a>
-                        <ul class="dropdown-menu border-0 shadow-sm">
-                            <!-- <li><a class="dropdown-item" href="armada.html#big">Big Bus</a></li>
-                            <li><a class="dropdown-item" href="armada.html#medium">Medium Bus</a></li>
-                            <li><a class="dropdown-item" href="armada.html#small">Small Van</a></li> -->
-                            <li><a class="dropdown-item" href="#">Big Bus</a></li>
-                            <li><a class="dropdown-item" href="#">Medium Bus</a></li>
-                            <li><a class="dropdown-item" href="#">Small Van</a></li>
+                        <ul class="dropdown-menu border-0 shadow-sm mb-2 bg-dark text-center">
+                            <li><a class="dropdown-item text-white" href="#">Big Bus</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Medium Bus</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Small Van</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a href="#contact" class="btn btn-primary text-white px-4">Hubungi Kami</a>
+                        <a href="https://wa.me/6289686932490?text=Halo%20Makara%20Trans%2C%20saya%20ingin%20bertanya%20mengenai%20penyewaan%20bus."
+                            target="_blank" class="btn btn-primary text-white px-4 rounded-pill">Hubungi
+                            Kami</a>
                     </li>
-                    <!-- <li class="nav-item ms-lg-3">
-                        <button id="theme-toggle" class="btn btn-link nav-link p-0" aria-label="Toggle Dark Mode">
-                            <i class="bi bi-moon-fill fs-5"></i>
-                        </button>
-                    </li> -->
                 </ul>
             </div>
         </div>
     </nav>
-
-
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -82,9 +74,7 @@
                             <h1 class="hero-title">Jelajahi Dunia dengan Kenyamanan Premium</h1>
                             <p class="hero-subtitle">Nikmati perjalanan tak terlupakan dengan armada modern dan
                                 pelayanan terbaik dari kami.</p>
-                            <!-- <a href="armada.html" class="btn btn-primary btn-lg mt-3">Lihat Armada <i
-                                    class="bi bi-arrow-right ms-2"></i></a> -->
-                                    <a href="#" class="btn btn-primary btn-lg mt-3">Lihat Armada <i
+                            <a href="#" class="btn btn-primary btn-lg mt-3">Lihat Armada <i
                                     class="bi bi-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -98,7 +88,7 @@
                                 Anda.</p>
                             <!-- <a href="armada.html#big" class="btn btn-primary btn-lg mt-3">Detail Big Bus <i
                                     class="bi bi-arrow-right ms-2"></i></a> -->
-                                    <a href="#" class="btn btn-primary btn-lg mt-3">Detail Big Bus <i
+                            <a href="#" class="btn btn-primary btn-lg mt-3">Detail Big Bus <i
                                     class="bi bi-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -112,7 +102,7 @@
                                 yang lebih fleksibel.</p>
                             <!-- <a href="armada.html#medium" class="btn btn-primary btn-lg mt-3">Detail Medium Bus <i
                                     class="bi bi-arrow-right ms-2"></i></a> -->
-                        <a href="#" class="btn btn-primary btn-lg mt-3">Detail Medium Bus <i
+                            <a href="#" class="btn btn-primary btn-lg mt-3">Detail Medium Bus <i
                                     class="bi bi-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -128,20 +118,6 @@
             </button>
         </div>
     </section>
-
-    <!-- Hero Section -->
-    <!-- <section class="hero-section">
-        <div class="hero-slide" style="background-image: url('assets/images/DSC02950.jpg');">
-            <div class="hero-overlay"></div>
-            <div class="hero-content" data-aos="fade-up">
-                <h1 class="hero-title">Jelajahi Dunia dengan Kenyamanan Premium</h1>
-                <p class="hero-subtitle">Nikmati perjalanan tak terlupakan dengan armada modern dan pelayanan terbaik
-                    dari kami.</p>
-                <a href="armada.html" class="btn btn-primary btn-lg mt-3">Lihat Armada <i
-                        class="bi bi-arrow-right ms-2"></i></a>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Armada Preview Section -->
     <section class="section-padding">
@@ -247,7 +223,7 @@
                     <p class="text-muted mb-4">Makara adalah sebuah nama yang diambil dari bahasa Sanskerta, yang
                         bermakna "kendaraan para dewa." Filosofi ini tercermin dalam visi perusahaan bus pariwisata
                         Makara, yang berdiri di Sukabumi sejak tahun 2024.</p>
-                    <a href="#" class="btn btn-primary text-white">Selengkapnya</a>
+                    <a href="about.html" class="btn btn-primary text-white">Selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -303,14 +279,16 @@
     </footer>
 
     <!-- Scripts -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 800,
-            once: true
+            once: true,
+            easing: 'ease-in-out',
+            disable: function () {
+                return window.innerWidth < 766;
+            }
         });
     </script>
     <script src="js/theme.js"></script>
