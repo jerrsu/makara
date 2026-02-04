@@ -17,10 +17,16 @@
 } */
 
 /* ===== CUSTOM STYLE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 body {
   scroll-behavior: smooth;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-light);
+  overflow-x: hidden;
 }
+
+
 
 /* .hero {
       min-height: 100vh;
@@ -43,11 +49,12 @@ body {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .hero-img {
-    height: 260px;
-    /* MOBILE LEBIH PENDEK */
+  [data-aos] {
+    transform: none !important;
+    opacity: 1 !important;
   }
 }
+
 
 /* .stats {
       background: #0d1b2a;

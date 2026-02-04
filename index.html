@@ -14,9 +14,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- AOS Animation -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="asset/css/custom.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -64,31 +65,29 @@
 
         <div class="row g-3">
 
-          <!-- BIG BUS -->
-          <div class="col-md-4 ">
+          <div class="col-4">
             <a href="armada.html#big" class="selector-item">
               <img src="asset/image/jenis.png" alt="Big Bus">
               <span>Big Bus</span>
             </a>
           </div>
 
-          <!-- MEDIUM BUS -->
-          <div class="col-md-4 border-end border-start">
+          <div class="col-4 border-start border-end">
             <a href="armada.html#medium" class="selector-item">
-              <img src="asset/image/jenis.png" alt="Big Bus">
+              <img src="asset/image/jenis.png" alt="Medium Bus">
               <span>Medium Bus</span>
             </a>
           </div>
 
-          <!-- SMALL BUS -->
-          <div class="col-md-4">
+          <div class="col-4">
             <a href="armada.html#small" class="selector-item">
-              <img src="asset/image/jenis.png" alt="Big Bus">
+              <img src="asset/image/jenis.png" alt="Small Bus">
               <span>Small Bus</span>
             </a>
           </div>
 
         </div>
+
       </div>
     </div>
   </section>
@@ -102,7 +101,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 text-start" data-aos="fade-left">
-          <img src="asset/image/owner.png" class=" rounded ">
+          <img src="asset/image/owner.png" class="img-fluid rounded ">
         </div>
         <div class="col-lg-6" data-aos="fade-right">
           <p class="fw-bold">Tentang Kami</p>
@@ -251,7 +250,11 @@
     // init animation
     AOS.init({
       duration: 800,
-      once: true
+      once: true,
+      easing: 'ease-in-out',
+      disable: function () {
+        return window.innerWidth < 766;
+      }
     });
   </script>
 
