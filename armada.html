@@ -1,20 +1,238 @@
-<section class="py-5">
-  <div class="container">
-    <h1 class="fw-bold text-center mb-5">Armada Kami</h1>
+<!DOCTYPE html>
+<html lang="id">
 
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <img src="asset/img/bus-big.jpg" class="card-img-top">
-          <div class="card-body">
-            <h5>Big Bus</h5>
-            <a href="armada-detail.html" class="btn btn-outline-warning btn-sm">
-              Detail Armada
-            </a>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel Agency Terbaik - Sewa Bus dan Travel Wisata Nyaman dan Elegan">
+    <!-- <link rel="icon" type="image/png" href="assets/images/makara.png"> -->
+    <title>Beranda | Makara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        .slider-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.6s ease;
+        }
+
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .card {
+            min-width: 200px;
+            margin-right: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <section class="bg-white ">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-6 fw-bold mb-3">Executive Class</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    Armada kami terdiri dari bus-bus pilihan yang dirawat dengan standar tertinggi untuk menjamin
+                    kenyamanan dan keamanan perjalanan Anda.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card card-armada">
+                        <div class="position-relative">
+                            <img alt="Executive Class" class="card-img-top" src="image/big.jpg"
+                                style="height: 440px; object-fit: cover;" />
+                        </div>
+                        <a target="_blank"
+                            href="https://wa.me/6289686932490?text=Halo%20Makara%2C%20saya%20ingin%20bertanya%20mengenai%20penyewaan%20bus."
+                            class="btn btn-warning">Pesan Sekarang</a>
+
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Fasilitas</h3>
+                    <div class="slider-wrapper">
+                        <div class="slider-track" id="sliderTrack">
+
+                            <!-- CARD 1 -->
+                            <div class="card">
+                                <img src="image/DSC02893.jpg" class="card-img-top gallery-img">
+                            </div>
+
+                            <!-- CARD 2 -->
+                            <div class="card">
+                                <img src="image/DSC02899.jpg" class="card-img-top gallery-img">
+                            </div>
+
+                            <!-- CARD 3 -->
+                            <div class="card">
+                                <img src="image/DSC02931.jpg" class="card-img-top gallery-img">
+                            </div>
+
+                            <!-- CARD 4 -->
+                            <div class="card">
+                                <img src="image/DSC02895.jpg" class="card-img-top gallery-img">
+                            </div>
+
+                            <!-- CARD 5 -->
+                            <div class="card">
+                                <img src="image/DSC02915.jpg" class="card-img-top gallery-img">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 text-muted small mb-4 mt-3">
+                        <i class="bi bi-file-earmark-spreadsheet-fill"> 45 Kursi</i>
+                        <i class="bi bi-snow"> Full AC</i>
+                        <i class="bi bi-collection-play-fill"> Multimedia</i>
+                        <i class="bi bi-collection-play-fill"> GPS</i>
+                        <i class="bi bi-ev-front-fill"> P3K</i>
+                        <i class="bi bi-ev-front-fill"> Pengisi Daya</i>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-      </div>
-      <!-- repeat -->
+    </section>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center border-bottom pb-4 mb-5">
+                <div>
+                    <h2 class="fw-bold mb-1">Pilihan Armada Unggulan Lainnya...</h2>
+                    <p class="text-muted m-0">Temukan armada yang sesuai dengan kebutuhan perjalanan Anda</p>
+                </div>
+                <!-- <a class="text-primary fw-bold text-decoration-none d-none d-sm-block" href="#">Lihat Semua Armada
+                        →</a> -->
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="card card-armada">
+                        <div class="position-relative">
+                            <img alt="Executive Class" class="card-img-top" src="image/big.jpg"
+                                style="height: 240px; object-fit: cover;" />
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 start-0 m-3 fw-bold">TERPOPULER</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 class="h5 fw-bold m-0">Executive Class</h3>
+                                <span class="text-primary fw-bold">Rp 2jt /hari</span>
+                            </div>
+                            <div class="d-flex gap-3 text-muted small mb-4">
+                                <i class="bi bi-file-earmark-spreadsheet-fill"> 45 Kursi</i>
+                                <i class="bi bi-snow"> Full AC</i>
+                            </div>
+                            <a href="armada.html" class="btn btn-outline-secondary w-100 fw-bold">Detail Armada</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card card-armada">
+                        <div class="position-relative">
+                            <img alt="Executive Class" class="card-img-top" src="image/big.jpg"
+                                style="height: 240px; object-fit: cover;" />
+                            <span class="badge bg-warning position-absolute top-0 start-0 m-3 fw-bold">PREMIUM</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 class="h5 fw-bold m-0">Super Executive</h3>
+                                <span class="text-primary fw-bold">Rp 3.5jt /hari</span>
+                            </div>
+                            <div class="d-flex gap-3 text-muted small mb-4">
+                                <i class="bi bi-file-earmark-spreadsheet-fill"> 30 Kursi</i>
+                                <i class="bi bi-snow"> Meal Box</i>
+                            </div>
+                            <a href="armada.html" class="btn btn-outline-secondary w-100 fw-bold">Detail Armada</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card card-armada">
+                        <div class="position-relative">
+                            <img alt="Executive Class" class="card-img-top" src="image/big.jpg"
+                                style="height: 240px; object-fit: cover;" />
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3 fw-bold">VVIP</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 class="h5 fw-bold m-0">Luxury Suite</h3>
+                                <span class="text-primary fw-bold">Rp 5jt /hari</span>
+                            </div>
+                            <div class="d-flex gap-3 text-muted small mb-4">
+                                <i class="bi bi-file-earmark-spreadsheet-fill"> 20 Kursi</i>
+                                <i class="bi bi-snow"> Entertainment</i>
+                            </div>
+                            <a href="armada.html" class="btn btn-outline-secondary w-100 fw-bold">Detail Armada</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MODAL ZOOM IMAGE -->
+    <div class="modal fade" id="imageModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const track = document.getElementById("sliderTrack");
+        const cards = document.querySelectorAll(".card");
+        const cardWidth = 320; // width + margin
+        let index = 0;
+
+        function autoSlide() {
+            index++;
+
+            if (index > cards.length - 3) {
+                index = 0;
+            }
+
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+
+        setInterval(autoSlide, 3000);
+
+
+        // ===== IMAGE ZOOM MODAL =====
+        const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        const modalImg = document.getElementById("modalImage");
+
+        document.querySelectorAll(".gallery-img").forEach(img => {
+            img.addEventListener("click", function () {
+                modalImg.src = this.src;
+                modal.show();
+            });
+        });
+    </script>
+</body>
+
+</html>
