@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel Agency Terbaik - Sewa Bus dan Travel Wisata Nyaman dan Elegan">
+    <!-- <link rel="icon" type="image/png" href="assets/images/makara.png"> -->
+    <title>Beranda | Makara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <section class="">
+        <div class="container py-5">
+
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Booking Armada Sekarang</h2>
+                <p class="text-muted">Isi form berikut, tim kami akan langsung proses booking Anda</p>
+            </div>
+
+            <form id="bookingForm" class="row g-3">
+
+                <div class="col-md-6">
+                    <label class="form-label">Nama Pemesan</label>
+                    <input type="text" id="nama" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">No WhatsApp</label>
+                    <input type="text" id="phone" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Tanggal Berangkat</label>
+                    <input type="date" id="tanggal" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Jenis Armada</label>
+                    <select id="armada" class="form-select">
+                        <option>Big Bus</option>
+                        <option>Medium Bus</option>
+                        <option>Hiace</option>
+                        <option>Elf</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Tujuan</label>
+                    <input type="text" id="tujuan" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Jumlah Penumpang</label>
+                    <input type="number" id="pax" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Catatan Tambahan</label>
+                    <textarea id="note" class="form-control" rows="3"></textarea>
+                </div>
+
+                <div class="col-12 text-center mt-3">
+                    <button class="btn btn-success px-5 py-2">
+                        Kirim Booking via WhatsApp
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nomorAdmin = "089686932490";
+
+            let nama = document.getElementById("nama").value;
+            let phone = document.getElementById("phone").value;
+            let tanggal = document.getElementById("tanggal").value;
+            let armada = document.getElementById("armada").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let pax = document.getElementById("pax").value;
+            let note = document.getElementById("note").value;
+
+            let pesan =
+                "*BOOKING ARMADA BARU*\n\n" +
+                "Nama : " + nama + "\n" +
+                "No HP : " + phone + "\n\n" +
+                "Tanggal : " + tanggal + "\n" +
+                "Armada : " + armada + "\n" +
+                "Tujuan : " + tujuan + "\n" +
+                "Jumlah Pax : " + pax + "\n\n" +
+                "Catatan : " + (note || "-") + "\n\n" +
+                "Mohon info ketersediaan armada";
+
+            let url = "https://wa.me/" + nomorAdmin + "?text=" + encodeURIComponent(pesan);
+
+            window.open(url, "_blank");
+        });
+    </script>
+
+</body>
