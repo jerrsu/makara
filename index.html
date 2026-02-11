@@ -23,7 +23,7 @@
     <div id="navbar"></div>
     <main>
         <section class="container-fluid p-0">
-            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="hero-section text-white" style="background-image: url('image/DSC02950.jpg');">
@@ -42,8 +42,10 @@
                                             fasilitas bintang lima dan kru profesional.
                                         </p>
                                         <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="300">
-                                            <a class="btn btn-success btn-lg px-4 py-3 shadow" target="_blank"
-                                                href="https://wa.me/6289686932490?text=Halo%20Makara%2C%20saya%20ingin%20bertanya%20mengenai%20penyewaan%20bus.">Konsultasi
+                                            <!-- <a class="btn btn-success btn-lg px-4 py-3 shadow" target="_blank"
+                                                href="https://wa.me/6289686932490?text=Halo%20Makara%2C%20saya%20ingin%20bertanya%20mengenai%20penyewaan%20bus.">Pesan
+                                                Sekarang <i class="bi bi-whatsapp"></i></a> -->
+                                            <a class="btn btn-success btn-lg px-4 py-3 shadow" href="#formbooking">Pesan
                                                 Sekarang <i class="bi bi-whatsapp"></i></a>
                                             <a class="btn btn-outline-light btn-lg px-4 py-3" href="#armadas">Lihat
                                                 Armada</a>
@@ -69,8 +71,7 @@
                                             hiburan lengkap untuk kenyamanan maksimal Anda.
                                         </p>
                                         <div class="d-flex flex-wrap gap-3">
-                                            <a class="btn btn-info btn-lg px-4 py-3 shadow" target="_blank"
-                                                href="booking.html">Pesan
+                                            <a class="btn btn-success btn-lg px-4 py-3 shadow" href="#formbooking">Pesan
                                                 Sekarang <i class="bi bi-whatsapp"></i></a>
                                             <!-- <a class="btn btn-outline-light btn-lg px-4 py-3" href="#">Fasilitas
                                                 Kami</a> -->
@@ -263,50 +264,68 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="py-5 my-5">
-            <div class="container">
-                <div class="row align-items-end mb-5">
-                    <div class="col-lg-7" data-aos="fade-right">
-                        <h2 class="display-5 fw-bold mb-3">Layanan Eksklusif Kami</h2>
-                        <p class="text-muted fs-5">Kami menetapkan standar baru dalam kenyamanan transportasi darat
-                            untuk setiap perjalanan Anda.</p>
-                    </div>
+        <section class="py-5 bg-light rounded-5" id="formbooking">
+            <div class="container py-5">
+
+                <div class="text-center">
+                    <!-- <h2 class="display-5 fw-bold mb-3">Siap Merencanakan Perjalanan Anda?</h2> -->
+                    <h1 class="fw-bold">Booking Armada Sekarang</h1>
+                    <p class="text-muted">Isi form berikut, tim kami akan langsung proses booking Anda</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="p-4 border rounded-4 bg-white h-100 shadow-sm">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined fs-2">directions_bus</span>
-                            </div>
-                            <h3 class="h4 fw-bold">Armada Terbaru</h3>
-                            <p class="text-muted">Kendaraan keluaran terbaru dengan standar emisi tinggi dan perawatan
-                                rutin berkala di dealer resmi.</p>
-                        </div>
+
+                <form id="bookingForm" class="row g-3">
+
+                    <div class="col-md-6">
+                        <label class="form-label">Nama Pemesan</label>
+                        <input type="text" id="nama" class="form-control" required>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="p-4 border rounded-4 bg-white h-100 shadow-sm">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined fs-2">wifi_tethering</span>
-                            </div>
-                            <h3 class="h4 fw-bold">Fasilitas Bintang 5</h3>
-                            <p class="text-muted">Dilengkapi High-Speed WiFi, AC individual, Kursi Pijat Elektrik, dan
-                                Toilet yang senantiasa bersih.</p>
-                        </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">No WhatsApp</label>
+                        <input type="text" id="phone" class="form-control" required>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="p-4 border rounded-4 bg-white h-100 shadow-sm">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined fs-2">verified_user</span>
-                            </div>
-                            <h3 class="h4 fw-bold">Pengemudi Profesional</h3>
-                            <p class="text-muted">Driver berpengalaman dengan sertifikasi mengemudi defensif untuk
-                                menjamin keamanan penuh.</p>
-                        </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Tanggal Berangkat</label>
+                        <input type="date" id="tanggal" class="form-control" required>
                     </div>
-                </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Jenis Armada</label>
+                        <select id="armada" class="form-select">
+                            <option>Big Bus</option>
+                            <option>Medium Bus</option>
+                            <option>Hiace</option>
+                            <option>Elf</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Tujuan</label>
+                        <input type="text" id="tujuan" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Jumlah Penumpang</label>
+                        <input type="number" id="pax" class="form-control" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Catatan Tambahan</label>
+                        <textarea id="note" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="col-12 text-center mt-3">
+                        <button class="btn btn-success btn-lg px-5 py-2">
+                            Kirim
+                        </button>
+                    </div>
+
+                </form>
+
             </div>
-        </section> -->
-        <section class="py-5 my-5">
+        </section>
+        <!-- <section class="py-5 my-5">
             <div class="container">
                 <div class="bg-primary rounded-5 p-5 p-lg-5 position-relative overflow-hidden shadow-lg"
                     data-aos="zoom-in">
@@ -325,17 +344,12 @@
                                     <i class="bi bi-whatsapp"></i>
                                     Hubungi Kami
                                 </a>
-                                <!-- <a class="btn btn-warning btn-lg px-4 py-3 fw-bold d-flex align-items-center justify-content-center gap-2"
-                                    href="#">
-                                    <span class="material-symbols-outlined">description</span>
-                                    Dapatkan Penawaran
-                                </a> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
     <div id="footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
