@@ -73,8 +73,12 @@
                 </div>
 
                 <div class="col-12 text-center mt-3">
-                    <button class="btn btn-success px-5 py-2">
+                    <!-- <button class="btn btn-success px-5 py-2">
                         Kirim Booking via WhatsApp
+                    </button> -->
+                    <button type="submit" id="submitBtn" class="btn btn-success px-5 py-2">
+                        <span id="btnText">Kirim</span>
+                        <span id="btnLoading" style="display:none;">⏳ Mengirim...</span>
                     </button>
                 </div>
 
@@ -91,34 +95,71 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
-        document.getElementById("bookingForm").addEventListener("submit", function (e) {
+        document.getElementById("bookingForm").addEventListener("submit", async function (e) {
             e.preventDefault();
+            const form = document.getElementById("bookingForm");
+            const btn = document.getElementById("submitBtn");
+            const btnText = document.getElementById("btnText");
+            const btnLoading = document.getElementById("btnLoading");
 
-            const nomorAdmin = "6289686932490";
+            // ===== START LOADING =====
+            btn.disabled = true;
+            btnText.style.display = "none";
+            btnLoading.style.display = "inline";
+            try {
+                let nama = document.getElementById("nama").value;
+                let phone = document.getElementById("phone").value;
+                let tanggal = document.getElementById("tanggal").value;
+                let armada = document.getElementById("armada").value;
+                let tujuan = document.getElementById("tujuan").value;
+                let pax = document.getElementById("pax").value;
+                let note = document.getElementById("note").value;
 
-            let nama = document.getElementById("nama").value;
-            let phone = document.getElementById("phone").value;
-            let tanggal = document.getElementById("tanggal").value;
-            let armada = document.getElementById("armada").value;
-            let tujuan = document.getElementById("tujuan").value;
-            let pax = document.getElementById("pax").value;
-            let note = document.getElementById("note").value;
+                let pesan =
+                    "*BOOKING ARMADA BARU*\n\n" +
+                    "Nama : " + nama + "\n" +
+                    "No HP : " + phone + "\n\n" +
+                    "Tanggal : " + tanggal + "\n" +
+                    "Armada : " + armada + "\n" +
+                    "Tujuan : " + tujuan + "\n" +
+                    "Jumlah Pax : " + pax + "\n\n" +
+                    "Catatan : " + (note || "-") + "\n\n" +
+                    "Mohon info ketersediaan armada";
 
-            let pesan =
-                "*BOOKING ARMADA BARU*\n\n" +
-                "Nama : " + nama + "\n" +
-                "No HP : " + phone + "\n\n" +
-                "Tanggal : " + tanggal + "\n" +
-                "Armada : " + armada + "\n" +
-                "Tujuan : " + tujuan + "\n" +
-                "Jumlah Pax : " + pax + "\n\n" +
-                "Catatan : " + (note || "-") + "\n\n" +
-                "Mohon info ketersediaan armada";
+                const payload = {
+                    sessionId: "test",
+                    chatId: "6289686932490", // atau nomor admin kalau mau fix
+                    message: pesan,
+                    typingTime: 2000,
+                    replyTo: "3EB0B430A2B52B67D0"
+                };
 
-            let url = "https://wa.me/" + nomorAdmin + "?text=" + encodeURIComponent(pesan);
+                const response = await fetch("http://localhost:3000/api/whatsapp/chats/send-text", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
 
-            window.open(url, "_blank");
+                const result = await response.json();
+
+                console.log("WA API Response:", result);
+                alert("Booking berhasil dikirim!");
+                form.reset();
+
+            } catch (err) {
+                console.error(err);
+                alert("Gagal kirim booking");
+                form.reset();
+            }
+
+            // ===== STOP LOADING =====
+            btn.disabled = false;
+            btnText.style.display = "inline";
+            btnLoading.style.display = "none";
         });
+
     </script>
 
 </body>
