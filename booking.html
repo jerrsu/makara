@@ -95,71 +95,120 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
-        document.getElementById("bookingForm").addEventListener("submit", async function (e) {
-            e.preventDefault();
-            const form = document.getElementById("bookingForm");
-            const btn = document.getElementById("submitBtn");
-            const btnText = document.getElementById("btnText");
-            const btnLoading = document.getElementById("btnLoading");
+        document.getElementById("bookingForm").addEventListener("submit", function (e) {
+        e.preventDefault();
 
-            // ===== START LOADING =====
-            btn.disabled = true;
-            btnText.style.display = "none";
-            btnLoading.style.display = "inline";
-            try {
-                let nama = document.getElementById("nama").value;
-                let phone = document.getElementById("phone").value;
-                let tanggal = document.getElementById("tanggal").value;
-                let armada = document.getElementById("armada").value;
-                let tujuan = document.getElementById("tujuan").value;
-                let pax = document.getElementById("pax").value;
-                let note = document.getElementById("note").value;
+        const form = document.getElementById("bookingForm");
+        const btn = document.getElementById("submitBtn");
+        const btnText = document.getElementById("btnText");
+        const btnLoading = document.getElementById("btnLoading");
 
-                let pesan =
-                    "*BOOKING ARMADA BARU*\n\n" +
-                    "Nama : " + nama + "\n" +
-                    "No HP : " + phone + "\n\n" +
-                    "Tanggal : " + tanggal + "\n" +
-                    "Armada : " + armada + "\n" +
-                    "Tujuan : " + tujuan + "\n" +
-                    "Jumlah Pax : " + pax + "\n\n" +
-                    "Catatan : " + (note || "-") + "\n\n" +
-                    "Mohon info ketersediaan armada";
+        // ===== START LOADING =====
+        btn.disabled = true;
+        btnText.style.display = "none";
+        btnLoading.style.display = "inline";
 
-                const payload = {
-                    sessionId: "push_notif",
-                    chatId: "6283865580981", // atau nomor admin kalau mau fix
-                    message: pesan,
-                    typingTime: 2000,
-                    replyTo: "3EB0B430A2B52B67D0"
-                };
+        let nama = document.getElementById("nama").value;
+        let phone = document.getElementById("phone").value;
+        let tanggal = document.getElementById("tanggal").value;
+        let armada = document.getElementById("armada").value;
+        let tujuan = document.getElementById("tujuan").value;
+        let pax = document.getElementById("pax").value;
+        let note = document.getElementById("note").value;
 
-                const response = await fetch("https://chatery-0tzolosmeceg.sgp-arjuna.sumopod.my.id/api/whatsapp/chats/send-text", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "X-Api-Key": "bKlzf3qbODxSlpGJyB70fMHDL3TmSl9O"
-                    },
-                    body: JSON.stringify(payload)
-                });
+        let pesan =
+            "*BOOKING ARMADA BARU*\n\n" +
+            "Nama : " + nama + "\n" +
+            "No HP : " + phone + "\n\n" +
+            "Tanggal : " + tanggal + "\n" +
+            "Armada : " + armada + "\n" +
+            "Tujuan : " + tujuan + "\n" +
+            "Jumlah Pax : " + pax + "\n\n" +
+            "Catatan : " + (note || "-") + "\n\n" +
+            "Mohon info ketersediaan armada";
 
-                const result = await response.json();
+        // Encode pesan untuk URL
+        let encodedMessage = encodeURIComponent(pesan);
 
-                console.log("WA API Response:", result);
-                alert("Booking berhasil dikirim!");
-                form.reset();
+        // Redirect ke WhatsApp
+        window.open(
+            "https://wa.me/6281277774005?text=" + encodedMessage,
+            "_blank"
+        );
 
-            } catch (err) {
-                console.error(err);
-                alert("Gagal kirim booking");
-                form.reset();
-            }
+        form.reset();
 
-            // ===== STOP LOADING =====
-            btn.disabled = false;
-            btnText.style.display = "inline";
-            btnLoading.style.display = "none";
-        });
+        // ===== STOP LOADING =====
+        btn.disabled = false;
+        btnText.style.display = "inline";
+        btnLoading.style.display = "none";
+    });
+
+        // document.getElementById("bookingForm").addEventListener("submit", async function (e) {
+        //     e.preventDefault();
+        //     const form = document.getElementById("bookingForm");
+        //     const btn = document.getElementById("submitBtn");
+        //     const btnText = document.getElementById("btnText");
+        //     const btnLoading = document.getElementById("btnLoading");
+
+        //     // ===== START LOADING =====
+        //     btn.disabled = true;
+        //     btnText.style.display = "none";
+        //     btnLoading.style.display = "inline";
+        //     try {
+        //         let nama = document.getElementById("nama").value;
+        //         let phone = document.getElementById("phone").value;
+        //         let tanggal = document.getElementById("tanggal").value;
+        //         let armada = document.getElementById("armada").value;
+        //         let tujuan = document.getElementById("tujuan").value;
+        //         let pax = document.getElementById("pax").value;
+        //         let note = document.getElementById("note").value;
+
+        //         let pesan =
+        //             "*BOOKING ARMADA BARU*\n\n" +
+        //             "Nama : " + nama + "\n" +
+        //             "No HP : " + phone + "\n\n" +
+        //             "Tanggal : " + tanggal + "\n" +
+        //             "Armada : " + armada + "\n" +
+        //             "Tujuan : " + tujuan + "\n" +
+        //             "Jumlah Pax : " + pax + "\n\n" +
+        //             "Catatan : " + (note || "-") + "\n\n" +
+        //             "Mohon info ketersediaan armada";
+
+        //         const payload = {
+        //             sessionId: "push_notif",
+        //             chatId: "6283865580981", // atau nomor admin kalau mau fix
+        //             message: pesan,
+        //             typingTime: 2000,
+        //             replyTo: "3EB0B430A2B52B67D0"
+        //         };
+
+        //         const response = await fetch("https://chatery-0tzolosmeceg.sgp-arjuna.sumopod.my.id/api/whatsapp/chats/send-text", {
+        //             method: "POST",
+        //             headers: {
+        //                 "Content-Type": "application/json",
+        //                 "X-Api-Key": "bKlzf3qbODxSlpGJyB70fMHDL3TmSl9O"
+        //             },
+        //             body: JSON.stringify(payload)
+        //         });
+
+        //         const result = await response.json();
+
+        //         console.log("WA API Response:", result);
+        //         alert("Booking berhasil dikirim!");
+        //         form.reset();
+
+        //     } catch (err) {
+        //         console.error(err);
+        //         alert("Gagal kirim booking");
+        //         form.reset();
+        //     }
+
+        //     // ===== STOP LOADING =====
+        //     btn.disabled = false;
+        //     btnText.style.display = "inline";
+        //     btnLoading.style.display = "none";
+        // });
 
     </script>
 
