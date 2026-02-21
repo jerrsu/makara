@@ -86,23 +86,24 @@
 
     <!-- Countdown -->
     <div class="row justify-content-center countdown mb-4">
-      <div class="col-3 col-md-2">
-        <span id="days">00</span>
-        Hari
-      </div>
-      <div class="col-3 col-md-2">
-        <span id="hours">00</span>
-        Jam
-      </div>
-      <div class="col-3 col-md-2">
-        <span id="minutes">00</span>
-        Menit
-      </div>
+    <div class="col-3 col-md-2">
+      <span id="days">00</span>
+      Hari
     </div>
+    <div class="col-3 col-md-2">
+      <span id="hours">00</span>
+      Jam
+    </div>
+    <div class="col-3 col-md-2">
+      <span id="minutes">00</span>
+      Menit
+    </div>
+    <div class="col-3 col-md-2">
+      <span id="seconds">00</span>
+      Detik
+    </div>
+  </div>
 
-    <a href="https://wa.me/6281277774005" target="_blank" class="btn btn-custom">
-      <i class="bi bi-whatsapp"></i> Hubungi Kami
-    </a>
   </div>
 </section>
 
@@ -111,25 +112,31 @@
 </footer>
 
 <script>
-  // Countdown sederhana (7 hari dari sekarang)
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 7);
+  // Ganti dengan tanggal launching kamu
+  const targetDate = new Date("March 31, 2026 00:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
+    if (distance <= 0) {
+      document.querySelector(".countdown").innerHTML = "Website Sudah Live!";
+      return;
+    }
+
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("days").innerText = String(days).padStart(2, '0');
+    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
   }
 
-  setInterval(updateCountdown, 1000);
   updateCountdown();
+  setInterval(updateCountdown, 1000);
 </script>
 
 </body>

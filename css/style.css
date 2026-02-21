@@ -8,6 +8,7 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #111318;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -132,6 +133,7 @@ footer {
     /* z-index: 9999; */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    /* max-width: 60px; */
 }
 
 .floating-whatsapp:hover {
