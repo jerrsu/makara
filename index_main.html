@@ -375,15 +375,65 @@
                 </div>
 
                 <form id="bookingForm" class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Jenis Armada</label><span class="text-danger">*</span>
+                        <select id="armada" class="form-select">
+                            <option>-Pilih Jenis Armada-</option>
+                            <option>Bus Besar Executive - Maks 50 Seat </option>
+                            <option>Bus Besar Super Executive +Leg Rest - Maks 32 Seat </option>
+                            <option>Medium Executive - 32 Seat</option>
+                            <option>Medium Super Executive +Leg Rest - Maks 18 Seat </option>
+                            <option>Small Executive - 14 Seat</option>
+                            <option>Small Super Executive +Leg Rest - Maks 8 Seat </option>
+                        </select>
+                    </div>
 
                     <div class="col-md-6">
+                        <label class="form-label">Jenis Perjalanan</label><span class="text-danger">*</span>
+                        <select id="jenis_perjalanan" class="form-select">
+                            <option>-Pilih Jenis Perjalanan-</option>
+                            <option>Wisata Bersama (KKL, Study Tour, Gathering dll)</option>
+                            <option>Wisata Reliji (Ziarah)</option>
+                            <option>Bisnis Trip</option>
+                            <option>Outdoor Study (KKL, Study Tour, Gathering dll)</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Bagaimana Kami Menyapa?</label><span class="text-danger">*</span>
+                        <select id="sapa" class="form-select">
+                            <option>Kakak</option>
+                            <option>Bapak</option>
+                            <option>Ibu</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
                         <label class="form-label">Nama Pemesan</label><span class="text-danger">*</span>
                         <input type="text" id="nama" class="form-control" required>
                     </div>
 
-                    <div class="col-md-6">
-                        <label class="form-label">No WhatsApp</label><span class="text-danger">*</span>
+                    <div class="col-md-3">
+                        <label class="form-label">No Telepon/ WhatsApp</label><span class="text-danger">*</span>
                         <input type="text" id="phone" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Jumlah Penumpang</label><span class="text-danger">*</span>
+                        <input type="number" id="pax" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Instansi Anda</label><span class="text-danger">*</span>
+                        <select id="instansi" class="form-select">
+                            <option>-Pilih-</option>
+                            <option>Customer Makara</option>
+                            <option>Biro Wisata</option>
+                            <option>Instansi Resmi (Akademi, Goverment dll)</option>
+                            <option>Corporate Program</option>
+                            <option>Lainnya</option>
+                        </select>
                     </div>
 
                     <div class="col-md-6">
@@ -392,21 +442,13 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Jenis Armada</label><span class="text-danger">*</span>
-                        <select id="armada" class="form-select">
-                            <option>Big Bus</option>
-                            <option>Medium Bus</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-6">
                         <label class="form-label">Tujuan</label><span class="text-danger">*</span>
                         <input type="text" id="tujuan" class="form-control" required>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Jumlah Penumpang</label><span class="text-danger">*</span>
-                        <input type="number" id="pax" class="form-control" required>
+                        <label class="form-label">Lokasi Jemput</label><span class="text-danger">*</span>
+                        <input type="text" id="lokasi_jemput" class="form-control" required>
                     </div>
 
                     <div class="col-12">
@@ -479,13 +521,20 @@
         let tujuan = document.getElementById("tujuan").value;
         let pax = document.getElementById("pax").value;
         let note = document.getElementById("note").value;
+        let sapa = document.getElementById("sapa").value;
+        let jenis_perjalanan = document.getElementById("jenis_perjalanan").value;
+        let instansi = document.getElementById("instansi").value;
+        let lokasi_jemput = document.getElementById("lokasi_jemput").value;
 
         let pesan =
             "*BOOKING ARMADA BARU*\n\n" +
-            "Nama : " + nama + "\n" +
-            "No HP : " + phone + "\n\n" +
+            "Nama : " + sapa + " " + nama + "\n" +
+            "No HP : " + phone + "\n" +
+            "Jenis Perjalanan : " + jenis_perjalanan + "\n" +
+            "Instansi : " + instansi + "\n" +
             "Tanggal : " + tanggal + "\n" +
             "Armada : " + armada + "\n" +
+            "Lokasi Jemput : " + lokasi_jemput + "\n" +
             "Tujuan : " + tujuan + "\n" +
             "Jumlah Pax : " + pax + "\n\n" +
             "Catatan : " + (note || "-") + "\n\n" +
