@@ -22,72 +22,107 @@
 <body>
     <div id="navbar"></div>
 
-    <section class="">
-        <div class="container py-5">
+    <section class="py-5 bg-light rounded-5" id="formbooking">
+            <div class="container ">
 
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Booking Armada Sekarang</h2>
-                <p class="text-muted">Isi form berikut, tim kami akan langsung proses booking Anda</p>
+                <div class="text-center">
+                    <h1 class="fw-bold">Booking Armada Sekarang</h1>
+                    <p class="text-muted">Isi form berikut, tim kami akan langsung proses booking Anda</p>
+                </div>
+
+                <form id="bookingForm" class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Jenis Armada</label><span class="text-danger">*</span>
+                        <select id="armada" class="form-select">
+                            <option>-Pilih Jenis Armada-</option>
+                            <option>Bus Besar Executive - Maks 50 Seat </option>
+                            <option>Bus Besar Super Executive +Leg Rest - Maks 32 Seat </option>
+                            <option>Medium Executive - 32 Seat</option>
+                            <option>Medium Super Executive +Leg Rest - Maks 18 Seat </option>
+                            <option>Small Executive - 14 Seat</option>
+                            <option>Small Super Executive +Leg Rest - Maks 8 Seat </option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Jenis Perjalanan</label><span class="text-danger">*</span>
+                        <select id="jenis_perjalanan" class="form-select">
+                            <option>-Pilih Jenis Perjalanan-</option>
+                            <option>Wisata Bersama (KKL, Study Tour, Gathering dll)</option>
+                            <option>Wisata Reliji (Ziarah)</option>
+                            <option>Bisnis Trip</option>
+                            <option>Outdoor Study (KKL, Study Tour, Gathering dll)</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Bagaimana Kami Menyapa?</label><span class="text-danger">*</span>
+                        <select id="sapa" class="form-select">
+                            <option>Kakak</option>
+                            <option>Bapak</option>
+                            <option>Ibu</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Nama Pemesan</label><span class="text-danger">*</span>
+                        <input type="text" id="nama" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">No Telepon/ WhatsApp</label><span class="text-danger">*</span>
+                        <input type="text" id="phone" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Jumlah Penumpang</label><span class="text-danger">*</span>
+                        <input type="number" id="pax" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Instansi Anda</label><span class="text-danger">*</span>
+                        <select id="instansi" class="form-select">
+                            <option>-Pilih-</option>
+                            <option>Customer Makara</option>
+                            <option>Biro Wisata</option>
+                            <option>Instansi Resmi (Akademi, Goverment dll)</option>
+                            <option>Corporate Program</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Tanggal Berangkat</label><span class="text-danger">*</span>
+                        <input type="date" id="tanggal" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Tujuan</label><span class="text-danger">*</span>
+                        <input type="text" id="tujuan" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Lokasi Jemput</label><span class="text-danger">*</span>
+                        <input type="text" id="lokasi_jemput" class="form-control" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Catatan Tambahan</label>
+                        <textarea id="note" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="col-12 text-center mt-3">
+                        <button type="submit" id="submitBtn" class="btn btn-success px-5 py-2">
+                            <span id="btnText">Kirim</span>
+                            <span id="btnLoading" style="display:none;">⏳ Mengirim...</span>
+                        </button>
+                    </div>
+
+                </form>
+
             </div>
-
-            <form id="bookingForm" class="row g-3">
-
-                <div class="col-md-6">
-                    <label class="form-label">Nama Pemesan</label>
-                    <input type="text" id="nama" class="form-control" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label">No WhatsApp</label>
-                    <input type="text" id="phone" class="form-control" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label">Tanggal Berangkat</label>
-                    <input type="date" id="tanggal" class="form-control" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label">Jenis Armada</label>
-                    <select id="armada" class="form-select">
-                        <option>Big Bus</option>
-                        <option>Medium Bus</option>
-                        <option>Hiace</option>
-                        <option>Elf</option>
-                    </select>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label">Tujuan</label>
-                    <input type="text" id="tujuan" class="form-control" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label">Jumlah Penumpang</label>
-                    <input type="number" id="pax" class="form-control" required>
-                </div>
-
-                <div class="col-12">
-                    <label class="form-label">Catatan Tambahan</label>
-                    <textarea id="note" class="form-control" rows="3"></textarea>
-                </div>
-
-                <div class="col-12 text-center mt-3">
-                    <!-- <button class="btn btn-success px-5 py-2">
-                        Kirim Booking via WhatsApp
-                    </button> -->
-                    <button type="submit" id="submitBtn" class="btn btn-success px-5 py-2">
-                        <span id="btnText">Kirim</span>
-                        <span id="btnLoading" style="display:none;">⏳ Mengirim...</span>
-                    </button>
-                </div>
-
-            </form>
-
-        </div>
-
-
-    </section>
+        </section>
 
     <div id="footer"></div>
 
@@ -96,53 +131,60 @@
     <script src="js/script.js"></script>
     <script>
         document.getElementById("bookingForm").addEventListener("submit", function (e) {
-        e.preventDefault();
+            e.preventDefault();
 
-        const form = document.getElementById("bookingForm");
-        const btn = document.getElementById("submitBtn");
-        const btnText = document.getElementById("btnText");
-        const btnLoading = document.getElementById("btnLoading");
+            const form = document.getElementById("bookingForm");
+            const btn = document.getElementById("submitBtn");
+            const btnText = document.getElementById("btnText");
+            const btnLoading = document.getElementById("btnLoading");
 
-        // ===== START LOADING =====
-        btn.disabled = true;
-        btnText.style.display = "none";
-        btnLoading.style.display = "inline";
+            // ===== START LOADING =====
+            btn.disabled = true;
+            btnText.style.display = "none";
+            btnLoading.style.display = "inline";
 
-        let nama = document.getElementById("nama").value;
-        let phone = document.getElementById("phone").value;
-        let tanggal = document.getElementById("tanggal").value;
-        let armada = document.getElementById("armada").value;
-        let tujuan = document.getElementById("tujuan").value;
-        let pax = document.getElementById("pax").value;
-        let note = document.getElementById("note").value;
+            let nama = document.getElementById("nama").value;
+            let phone = document.getElementById("phone").value;
+            let tanggal = document.getElementById("tanggal").value;
+            let armada = document.getElementById("armada").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let pax = document.getElementById("pax").value;
+            let note = document.getElementById("note").value;
+            let sapa = document.getElementById("sapa").value;
+            let jenis_perjalanan = document.getElementById("jenis_perjalanan").value;
+            let instansi = document.getElementById("instansi").value;
+            let lokasi_jemput = document.getElementById("lokasi_jemput").value;
 
-        let pesan =
-            "*BOOKING ARMADA BARU*\n\n" +
-            "Nama : " + nama + "\n" +
-            "No HP : " + phone + "\n\n" +
-            "Tanggal : " + tanggal + "\n" +
-            "Armada : " + armada + "\n" +
-            "Tujuan : " + tujuan + "\n" +
-            "Jumlah Pax : " + pax + "\n\n" +
-            "Catatan : " + (note || "-") + "\n\n" +
-            "Mohon info ketersediaan armada";
+            let pesan =
+                "*BOOKING ARMADA BARU*\n\n" +
+                "Nama : " + sapa + " " + nama + "\n" +
+                "No HP : " + phone + "\n" +
+                "Jenis Perjalanan : " + jenis_perjalanan + "\n" +
+                "Instansi : " + instansi + "\n" +
+                "Tanggal : " + tanggal + "\n" +
+                "Armada : " + armada + "\n" +
+                "Lokasi Jemput : " + lokasi_jemput + "\n" +
+                "Tujuan : " + tujuan + "\n" +
+                "Jumlah Pax : " + pax + "\n\n" +
+                "Catatan : " + (note || "-") + "\n\n" +
+                "Mohon info ketersediaan armada";
 
-        // Encode pesan untuk URL
-        let encodedMessage = encodeURIComponent(pesan);
+            // Encode pesan untuk URL
+            let encodedMessage = encodeURIComponent(pesan);
 
-        // Redirect ke WhatsApp
-        window.open(
-            "https://wa.me/6281277774005?text=" + encodedMessage,
-            "_blank"
-        );
+            // Redirect ke WhatsApp
+            window.open(
+                "https://wa.me/6281277774005?text=" + encodedMessage,
+                "_blank"
+            );
 
-        form.reset();
+            form.reset();
 
-        // ===== STOP LOADING =====
-        btn.disabled = false;
-        btnText.style.display = "inline";
-        btnLoading.style.display = "none";
-    });
+            // ===== STOP LOADING =====
+            btn.disabled = false;
+            btnText.style.display = "inline";
+            btnLoading.style.display = "none";
+        });
 
         // document.getElementById("bookingForm").addEventListener("submit", async function (e) {
         //     e.preventDefault();
