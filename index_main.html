@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Travel Agency Terbaik - Sewa Bus dan Travel Wisata Nyaman dan Elegan">
-    <!-- <link rel="icon" type="image/png" href="assets/images/makara.png"> -->
-    <title>Beranda | Makara</title>
+    <meta name="description" content="Sewa bus pariwisata Makara untuk wisata, study tour, ziarah, dan perjalanan rombongan. Armada premium, driver profesional, dan harga kompetitif. Booking mudah via WhatsApp.">    
+    <meta property="og:title" content="Sewa Bus Pariwisata Makara">
+    <meta property="og:description" content="Armada bus premium untuk wisata, study tour, ziarah, dan perjalanan rombongan. Booking cepat via WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://makarabus.com/image/makara.png">
+    <title>Sewa Bus Pariwisata Makara | Bus Wisata, Study Tour & Ziarah</title>    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
@@ -19,48 +22,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <style>
-        .layanan-utama {
-            position: relative;
-            padding: 120px 0;
-            background-image: url('image/jetbus_fitur/DSC02893.jpg'); /* ganti dengan image kamu */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-        }
-
-        .layanan-utama .overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(0,0,0,0.85) 0%,
-                rgba(0,80,70,0.85) 100%
-            );
-            z-index: 1;
-        }
-
-        .layanan-list {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .layanan-item {
-            display: flex;
-            gap: 24px;
-            align-items: flex-start;
-        }
-
-        .layanan-item h5 {
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .layanan-item p {
-            opacity: 0.8;
-            margin: 0;
-        }
-
         .number {
             font-size: 32px;
             font-weight: 700;
@@ -78,13 +39,11 @@
             <div id="heroCarousel" class="carousel slide carousel-fade"  data-bs-ride="carousel" data-bs-interval="3000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="hero-section text-white" style="background-image: url('image/cover.webp');">
+                        <div class="hero-section text-white" style="background-image: url('image/cover3.webp');">
                             <div class="hero-overlay"></div>
                             <div class="container position-relative z-1 py-5">
                                 <div class="row">
                                     <div class="col-lg-8">
-                                        <!-- <span class="badge bg-warning mt-2 mb-3 px-3 py-2 text-uppercase fw-bold"
-                                            data-aos="fade-up">Pelayanan Eksklusif</span> -->
                                         <h1 class="display-3 fw-bolder mb-4" data-aos="fade-up" data-aos-delay="100">
                                             Perjalanan Nyaman,<br />Armada Premium
                                         </h1>
@@ -94,9 +53,9 @@
                                             fasilitas bintang lima dan Crew profesional.
                                         </p>
                                         <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="300">
-                                            <a class="btn btn-success btn-lg px-4 py-3 shadow" href="#formbooking">Booking
+                                            <a class="btn btn-info px-4 py-3 fw-bold" href="#formbooking">Booking
                                                 Sekarang <i class="bi bi-whatsapp"></i></a>
-                                            <a class="btn btn-outline-light btn-lg px-4 py-3" href="#armadas">Lihat
+                                            <a class="btn btn-warning px-4 py-3" href="#armadas">Lihat
                                                 Armada</a>
                                         </div>
                                     </div>
@@ -105,7 +64,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="hero-section text-white" style="background-image: url('image/cover2.webp');">
+                        <div class="hero-section text-white" style="background-image: url('image/crew.webp');">
                             <div class="hero-overlay"></div>
                             <div class="container position-relative z-1 py-5">
                                 <div class="row">
@@ -120,7 +79,7 @@
                                             hiburan lengkap untuk kenyamanan maksimal Anda.
                                         </p>
                                         <div class="d-flex flex-wrap gap-3">
-                                            <a class="btn btn-success btn-lg px-4 py-3 shadow" href="#formbooking">Booking
+                                            <a class="btn btn-info px-4 py-3 fw-bold" href="#formbooking">Booking
                                                 Sekarang <i class="bi bi-whatsapp"></i></a>
                                         </div>
                                     </div>
@@ -140,7 +99,7 @@
             </div>
         </section>
         <section class="py-5 bg-light " id="armadas">
-            <div class="container mb-3">
+            <div class="container">
                 <div class="d-flex justify-content-between align-items-center border-bottom pb-4 mb-5">
                     <div>
                         <h2 class="fw-bold mb-1">Pilihan Armada Unggulan</h2>
@@ -149,12 +108,10 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-6 col-md-6" data-aos="fade-up">
-                        <div class="card card-armada">
+                        <div class="card card-armada shadow">
                             <div class="position-relative">
-                                <img alt="Executive Class" class="card-img-top" src="image/black/jetbus3.jpg"
+                                <img alt="Executive Class" class="card-img-top" src="image/jetbus3/jetbus3.webp"
                                     style="height: 300px; object-fit: cover;" />
-                                <!-- <span
-                                    class="badge bg-white text-dark position-absolute top-0 start-0 m-3 fw-bold">TERPOPULER</span> -->
                             </div>
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
@@ -176,23 +133,20 @@
                                         </span> 
                                     TV</span>
                                 </div>
-                                <a class="btn btn-primary w-100 fw-bold target=" _blank"
+                                <a class="btn btn-dark w-100 fw-bold target=" _blank"
                                     href="jetbus3.html">Detail Armada</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card card-armada">
+                        <div class="card card-armada shadow">
                             <div class="position-relative">
-                                <img alt="Executive Class" class="card-img-top" src="image/gold/jetbus5.jpg"
+                                <img alt="Executive Class" class="card-img-top" src="image/gold/jetbus5.webp"
                                     style="height: 300px; object-fit: cover;" />
-                                <!-- <span
-                                    class="badge bg-warning position-absolute top-0 start-0 m-3 fw-bold">PREMIUM</span> -->
                             </div>
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h3 class="h5 fw-bold m-0">Jetbus 5</h3>
-                                    <!-- <span class="text-primary fw-bold">Rp 3.5jt /hari</span> -->
                                 </div>
                                 <div class="d-flex gap-3 text-muted small mb-4">
                                     <span class="d-flex align-items-center gap-1"><span
@@ -209,11 +163,9 @@
                                         <span class="material-symbols-outlined">tv
                                         </span> 
                                     TV</span>
-                                    <span class="d-flex align-items-center gap-1">
-                                        <span class="material-symbols-outlined fs-6">restaurant</span> Meal Box</span>
                                     
                                 </div>
-                                <a class="btn btn-primary w-100 fw-bold" href="super_executive.html">Detail Armada</a>
+                                <a class="btn btn-dark w-100 fw-bold" href="jetbus5.html">Detail Armada</a>
                             </div>
                         </div>
                     </div>
@@ -233,9 +185,9 @@
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature-card p-4 rounded-4 h-100 border-0">
-                            <div class="bg-primary-custom bg-opacity-10 text-primary-custom rounded-3 d-inline-flex align-items-center justify-content-center mb-3"
+                            <div class="bg-dark-custom bg-opacity-10 text-dark-custom rounded-3 d-inline-flex align-items-center justify-content-center mb-3"
                                 style="width: 50px; height: 50px;">
-                                <span class="text-primary">
+                                <span class="text-dark">
                                     <h1 class="bi bi-shield-fill-check"></h1>
                                 </span>
                             </div>
@@ -246,9 +198,9 @@
                     </div>
                     <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                         <div class="feature-card p-4 rounded-4 h-100 border-0">
-                            <div class="bg-primary-custom bg-opacity-10 text-primary-custom rounded-3 d-inline-flex align-items-center justify-content-center mb-3"
+                            <div class="bg-dark-custom bg-opacity-10 text-dark-custom rounded-3 d-inline-flex align-items-center justify-content-center mb-3"
                                 style="width: 50px; height: 50px;">
-                                <span class="text-primary">
+                                <span class="text-dark">
                                     <h1 class="bi bi-person-check-fill"></h1>
                                 </span>
                             </div>
@@ -269,14 +221,14 @@
 
                     <div class="col-md-12 col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature-card rounded-3 border-0 shadow">
-                            <img src="image/cover3.webp" alt="" class="img-fluid rounded-3">
+                            <img src="image/jetbus3/c.webp" alt="" class="img-fluid rounded-3">
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-card p-4 rounded-4 h-100 border-0">
-                            <div class="bg-primary-custom bg-opacity-10 text-primary-custom rounded-3 d-inline-flex align-items-center justify-content-center mb-3"
+                            <div class="bg-dark-custom bg-opacity-10 text-dark-custom rounded-3 d-inline-flex align-items-center justify-content-center mb-3"
                                 style="width: 50px; height: 50px;">
-                                <span class="text-primary">
+                                <span class="text-dark">
                                     <h1 class="bi bi-layers-fill"></h1>
                                 </span>
                             </div>
@@ -288,9 +240,9 @@
 
                     <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                         <div class="feature-card p-4 rounded-4 h-100 border-0">
-                            <div class="bg-primary-custom bg-opacity-10 text-primary-custom rounded-3 d-inline-flex align-items-center justify-content-center mb-3"
+                            <div class="bg-dark-custom bg-opacity-10 text-dark-custom rounded-3 d-inline-flex align-items-center justify-content-center mb-3"
                                 style="width: 50px; height: 50px;">
-                                <span class="text-primary">
+                                <span class="text-dark">
                                     <h1 class="bi bi-bus-front"></h1>
                                 </span>
                             </div>
@@ -303,92 +255,105 @@
             </div>
         </section>
 
-        <section class="py-5" id="formbooking">
+        <section class="py-5 bg-dark text-white" id="formbooking">
             <div class="container ">
                 <div class="row g-4">
                     <div class="col-md-6 justify-content-center  d-flex flex-column">
-                        <h1 class="fw-bold">Booking Armada <br>Sekarang!</h1>
-                        <p class="text-muted">Isi form berikut, tim kami akan langsung proses booking Anda</p>
+                        <h1 class="fw-bold">Booking Armada <br><h1 class="text-info">Sekarang!</h1></h1>
+                        <p class="text-white">Isi form berikut, tim kami akan langsung proses booking Anda</p>
                     </div>
-                    <div class="col-md-6">
-                        <form id="bookingForms" class="row g-3 mt-3 bg-light p-4 rounded-4 shadow">
+                    <div class="col-md-6" >
+                        <form id="bookingForms"
+                            class="row g-3 mt-3 p-4 rounded-4 shadow"
+                            style="background:#161a20;border-color:#2a2f36;color:#e6e6e6;">
+
                             <div class="col-md-6">
                                 <label class="form-label">Jenis Armada</label><span class="text-danger">*</span>
-                                <select id="armada" class="form-select">
-                                    <option>-Pilih Jenis Armada-</option>
-                                    <option>Medium 35 Seats</option>
-                                    <option>Bigbus 30 Seats Leg Rest</option>
-                                    <option>Bigbus 35 Seats Toilet & Smoking Area</option>
-                                    <option>Bigbus 30 Seats</option>
-                                    <option>Bigbus 59 Seats</option></select>
+                                <select id="armada" class="form-select"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;">
+                                <option>-Pilih Jenis Armada-</option>
+                                <option>Medium 35 Seats</option>
+                                <option>Bigbus 30 Seats Leg Rest</option>
+                                <option>Bigbus 35 Seats Toilet & Smoking Area</option>
+                                <option>Bigbus 30 Seats</option>
+                                <option>Bigbus 59 Seats</option>
+                                </select>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Jenis Perjalanan</label><span class="text-danger">*</span>
-                                <select id="jenis_perjalanan" class="form-select">
-                                    <option>-Pilih Jenis Perjalanan-</option>
-                                    <option>Wisata Bersama (KKL, Study Tour, Gathering dll)</option>
-                                    <option>Wisata Reliji (Ziarah)</option>
-                                    <option>Bisnis Trip</option>
-                                    <option>Outdoor Study (KKL, Study Tour, Gathering dll)</option>
-                                    <option>Lainnya</option>
+                                <select id="jenis_perjalanan" class="form-select"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;">
+                                <option>-Pilih Jenis Perjalanan-</option>
+                                <option>Wisata Bersama (KKL, Study Tour, Gathering dll)</option>
+                                <option>Wisata Reliji (Ziarah)</option>
+                                <option>Bisnis Trip</option>
+                                <option>Outdoor Study (KKL, Study Tour, Gathering dll)</option>
+                                <option>Lainnya</option>
                                 </select>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Nama Pemesan</label><span class="text-danger">*</span>
-                                <input type="text" id="nama" class="form-control" required>
+                                <input type="text" id="nama" class="form-control"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">No Telepon</label><span class="text-danger">*</span>
-                                <input type="text" id="phone" class="form-control" required>
+                                <input type="text" id="phone" class="form-control"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Jumlah Penumpang</label><span class="text-danger">*</span>
-                                <input type="number" id="pax" class="form-control" required>
+                                <input type="number" id="pax" class="form-control"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Instansi Anda</label><span class="text-danger">*</span>
-                                <select id="instansi" class="form-select">
-                                    <option>-Pilih-</option>
-                                    <option>Customer Makara</option>
-                                    <option>Biro Wisata</option>
-                                    <option>Instansi Resmi (Akademi, Goverment dll)</option>
-                                    <option>Corporate Program</option>
-                                    <option>Lainnya</option>
+                                <select id="instansi" class="form-select"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;">
+                                <option>-Pilih-</option>
+                                <option>Customer Makara</option>
+                                <option>Biro Wisata</option>
+                                <option>Instansi Resmi (Akademi, Goverment dll)</option>
+                                <option>Corporate Program</option>
+                                <option>Lainnya</option>
                                 </select>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Tujuan</label><span class="text-danger">*</span>
-                                <input type="text" id="tujuan" class="form-control" required>
+                                <input type="text" id="tujuan" class="form-control"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Lokasi Jemput</label><span class="text-danger">*</span>
-                                <input type="text" id="lokasi_jemput" class="form-control" required>
+                                <input type="text" id="lokasi_jemput" class="form-control"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Tanggal</label><span class="text-danger">*</span>
-                                <input type="date" id="tanggal" class="form-control" required>
+                                <input type="date" id="tanggal" class="form-control"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Catatan Tambahan</label>
-                                <textarea id="note" class="form-control" rows="3"></textarea>
+                                <textarea id="note" class="form-control" rows="3"
+                                style="background:#0f1115;border:1px solid #2a2f36;color:#e6e6e6;"></textarea>
                             </div>
 
-                            <!-- <div class="col-12 text-center mt-3"> -->
-                                <button type="submit" id="submitBtn" class="btn btn-primary px-5 py-3 fw-bold">
-                                    <span id="btnText">Kirim</span>
-                                    <span id="btnLoading" style="display:none;">⏳ Mengirim...</span>
-                                </button>
-                            <!-- </div> -->
-                        </form>
+                            <button type="submit" id="submitBtn" class="btn btn-outline-light px-5 py-3 fw-bold">
+                                <span id="btnText">Kirim</span>
+                                <span id="btnLoading" style="display:none;">⏳ Mengirim...</span>
+                            </button>
+
+                            </form>
                     </div>
                 </div>
             </div>
